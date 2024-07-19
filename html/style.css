@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans', sans-serif, 'Noto Color Emoji';
+    color: white;
+    /* background-color: gray; */
+}
+
+#status_div {
+    position: absolute;
+    /* height: 100%; */
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+#status_text {
+    display: grid;
+    transform: rotate(45deg);
+}
+
+.val {
+    /* text-align: left; */
+    /* padding: 0px;
+    margin: 0px; */
+}
+
+.mval {
+    /* text-align: right; */
+    /* padding: 2px; */
+    /* margin: 1200px; */
+}
+
+hr {
+    margin: 0px;
+    width: 50%;
+    /* padding: 0px; */
+    transform: rotate(-10deg) translate(40%, 100%);
+}
+
+
+.status_style {
+    font-size: 0.75rem;
+    position: relative;
+    width: 4vh !important;
+    height: 4vh !important;
+    margin: 0.3vh;
+    /* padding: 0.3vw; */
+    /* float: left; */
+    border-radius: 1vmin;
+    text-align: center;
+    /* color: rgb(232, 184, 255); */
+    color: rgb(0, 255, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
