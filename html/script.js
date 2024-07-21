@@ -51,10 +51,13 @@ function createStatus(data) {
 
 }
 
+// https://stackoverflow.com/a/55387306/14125122
+const interleave = (arr, thing) => [].concat(...arr.map(n => [n, thing])).slice(0, -1)
+
 function updateStatus(data) {
     const name = data.name
-    const val = data.val
-    const mval = data.mval
+    const val = Array.from(data.val)
+    // const mval = data.mval
     // let val = text
     // if (text.includes('/')) {
     //     let temp = text.split('/')
@@ -62,7 +65,15 @@ function updateStatus(data) {
     // }
     // val + '<hr>' + mval)
 
-    $('#' + name).html(val + '<hr>' + mval)
+    // status_contents = ''
+    // for (v of val) {
+    //     status_contents += v
+    //     status_contents += '<hr>'
+    //     // console.log(score);
+    // }
+
+    $('#' + name).html(interleave(val, '<hr>'))
+    // $('#' + name).html(val + '<hr>' + mval)
     // $('#' + name).html(`
     //     <div class='val'>${val}</span>
     //     <hr>
